@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Puritan', sans-serif; /* BILO font */
   background-color: #fff;
   color: #111;
   display: flex;
@@ -70,6 +70,15 @@ nav a.active::after {
   width: 100%;
 }
 
+.project1 h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: rgb(211,188,141);
+}
+
 /* Basic content section placeholder */
 main {
   margin-top: 3rem;
@@ -77,3 +86,211 @@ main {
   max-width: 700px;
   line-height: 1.6;
 }
+
+/* Main image styling */
+.main-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+.main-image img {
+  max-width: 90%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+/* Row of big images */
+.big-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem auto;
+  max-width: 90%;
+}
+
+/* Make figures contain both image + caption */
+.big-images figure {
+  width: 33%;
+  text-align: center;
+}
+
+/* Images animate in */
+.big-images img {
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-in-out;
+  border-radius: 6px;
+}
+
+/* When visible */
+.big-images img.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Captions styled in beige tone */
+.big-images figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(211,188,141); /* same page tone */
+}
+
+
+/* Add stagger effect with transition delay */
+.big-images img:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.big-images img:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.big-images img:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Flip card container */
+.flip-card {
+  perspective: 1000px;
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+
+/* Inner container that rotates */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* subtle shadow */
+  background-color: rgb(211, 188, 141);
+}
+
+/* Flip trigger */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back */
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+/* Front (image) */
+.flip-card-front img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Back (text) */
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(211, 188, 141);
+  color: #222;
+  transform: rotateY(180deg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Main2 single image (static, no fade) */
+.main2-image {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  max-width: 90%;
+}
+
+.main2-image figure {
+  width: 100%;
+  text-align: center;
+}
+
+.main2-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.main2-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(211,188,141);
+}
+
+
+
+/* Row of 5 small images */
+.small-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 3rem auto;
+  max-width: 90%;
+}
+
+.small-images figure {
+  flex: 1;
+  text-align: center;
+}
+
+.small-images img {
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-in-out;
+  border-radius: 6px;
+}
+
+/* Visible state */
+.small-images img.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.small-images figure:nth-child(1) { transition-delay: 0.1s; }
+.small-images figure:nth-child(2) { transition-delay: 0.25s; }
+.small-images figure:nth-child(3) { transition-delay: 0.4s; }
+.small-images figure:nth-child(4) { transition-delay: 0.55s; }
+.small-images figure:nth-child(5) { transition-delay: 0.7s; }
+
+/* Caption styling */
+.small-images figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
