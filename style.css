@@ -28,7 +28,7 @@ body {
 header {
   text-align: center;
   padding: 3rem 1rem 2rem;
-  background-color: rgb(219, 217, 208);
+  background-color: rgb(219, 217, 211);
   width: 100%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -37,6 +37,11 @@ header h1 {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #111;
 }
 
 header h2 {
@@ -54,6 +59,24 @@ header h2 {
   font-style: normal;
   text-align: center;
   color: rgb(211,188,141);
+}
+
+.project2 h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: #764f71;
+}
+
+.project3 h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: #F0C6BC;
 }
 
 
@@ -114,15 +137,7 @@ main {
   width: 100%;
 }
 
-/* Main image styling */
-.main-image {
-  text-align: center;
-  margin: 2rem 0;
-}
-.main-image img {
-  max-width: 90%;
-  height: auto;
-}
+
 
 
 
@@ -133,7 +148,7 @@ main {
 
 
 /* Row of big images */
-.big-images {
+.project1 .big-images {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -142,13 +157,13 @@ main {
 }
 
 /* Make figures contain both image + caption */
-.big-images figure {
+.project1 .big-images figure {
   width: 33%;
   text-align: center;
 }
 
 /* Images animate in */
-.big-images img {
+.project1 .big-images img {
   width: 100%;
   opacity: 0;
   transform: translateX(-50px);
@@ -157,13 +172,13 @@ main {
 }
 
 /* When visible */
-.big-images img.visible {
+.project1 .big-images img.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
 /* Captions styled in beige tone */
-.big-images figcaption {
+.project1 .big-images figcaption {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
@@ -172,13 +187,13 @@ main {
 
 
 /* Add stagger effect with transition delay */
-.big-images img:nth-child(1) {
+.project1 .big-images img:nth-child(1) {
   transition-delay: 0.1s;
 }
-.big-images img:nth-child(2) {
+.project1 .big-images img:nth-child(2) {
   transition-delay: 0.3s;
 }
-.big-images img:nth-child(3) {
+.project1 .big-images img:nth-child(3) {
   transition-delay: 0.5s;
 }
 
@@ -240,7 +255,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(211, 188, 141);
+  background: white;
   color: #222;
   transform: rotateY(180deg);
   padding: 2rem;
@@ -249,6 +264,21 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.project1 .flip-card-back {
+  background-color: rgb(211, 188, 141);
+  color: black;
+}
+
+.project2 .flip-card-back {
+  background-color: #764f71;
+  color: black;
+}
+
+.project3 .flip-card-back {
+  background-color: #F0C6BC;
+  color: black;
 }
 
 
@@ -321,3 +351,52 @@ main {
   line-height: 1.4;
 }
 
+
+
+
+.projects {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.project-number {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111;
+  min-width: 40px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover: slightly larger */
+.project-number:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Click (active): subtle press */
+.project-number:active {
+  transform: scale(1.05);
+}
+
+.project-info h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.project-info p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
