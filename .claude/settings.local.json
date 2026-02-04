@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\matty\\\\Desktop\\\\MSA\\\\MSA-1\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\matty\\\\Desktop\\\\MSA\\\\MSA-1\" log --oneline -3)",
+      "Bash(git -C \"C:\\\\Users\\\\matty\\\\Desktop\\\\MSA\\\\MSA-1\" add index.html project1.html project2.html project3.html project4.html project5.html script.js style.css)",
+      "Bash(git -C \"C:\\\\Users\\\\matty\\\\Desktop\\\\MSA\\\\MSA-1\" commit -m \"$\\(cat <<''EOF''\nRedesign site with Apple-inspired aesthetic and mobile responsiveness\n\n- Complete CSS overhaul with beige/grey palette and full-bleed layouts\n- Add sticky header with hamburger menu for mobile navigation\n- Add footer with LinkedIn contact to all pages\n- Fix navigation links across all project pages\n- Update JavaScript for mobile menu and multiple flip cards\n- Add empty state styling for upcoming project pages\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C \"C:\\\\Users\\\\matty\\\\Desktop\\\\MSA\\\\MSA-1\" push)"
+    ]
+  }
+}
