@@ -41,7 +41,7 @@
 /* Scale In */
 .scale-in {
   opacity: 0;
-  transform: scale(0.9);
+  transform: scale(0.92);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -50,25 +50,16 @@
   transform: scale(1);
 }
 
-/* Stagger Animation Delays */
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
-.stagger-6 { transition-delay: 0.6s; }
-
-/* Hero Animations */
-.hero-content > * {
+/* Hero content stagger */
+.hero-box > * {
   opacity: 0;
-  transform: translateY(30px);
-  animation: heroFadeIn 0.8s ease forwards;
+  transform: translateY(24px);
+  animation: heroFadeIn 0.9s ease forwards;
 }
 
-.hero-subtitle { animation-delay: 0.2s; }
-.hero-title { animation-delay: 0.4s; }
-.hero-name { animation-delay: 0.6s; }
-.hero-tagline { animation-delay: 0.8s; }
+.hero-label  { animation-delay: 0.15s; }
+.hero-title  { animation-delay: 0.35s; }
+.hero-name   { animation-delay: 0.55s; }
 
 @keyframes heroFadeIn {
   to {
@@ -77,115 +68,35 @@
   }
 }
 
-/* Scroll Indicator Animation */
-@keyframes scrollBounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-15px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-8px);
-  }
-}
-
-.scroll-indicator {
-  animation: scrollBounce 2s infinite;
-}
-
-/* Project Card Hover */
-.project-card {
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.project-card:hover {
-  transform: translateY(-12px);
-}
-
-.project-card-image img {
+/* Project card hover — image zoom */
+.project-card-img {
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.project-card:hover .project-card-image img {
-  transform: scale(1.08);
+.project-card:hover .project-card-img {
+  transform: scale(1.05);
 }
 
-/* Button Animations */
-.btn {
-  position: relative;
-  overflow: hidden;
+/* Scroll indicator bounce */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
 }
 
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease;
-}
-
-.btn:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-/* Nav Link Underline */
-.nav-desktop a::after {
-  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Menu Toggle Animation */
-.menu-toggle span {
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Mobile Nav Slide */
-.nav-mobile {
-  transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.nav-mobile a {
-  opacity: 0;
-  transform: translateX(30px);
-  transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s ease;
-}
-
-.nav-mobile.active a {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.nav-mobile.active a:nth-child(1) { transition-delay: 0.1s; }
-.nav-mobile.active a:nth-child(2) { transition-delay: 0.15s; }
-.nav-mobile.active a:nth-child(3) { transition-delay: 0.2s; }
-.nav-mobile.active a:nth-child(4) { transition-delay: 0.25s; }
-
-/* Header Scroll Transition */
-.header {
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Image Load Animation */
+/* Image lazy-load fade */
 .img-load {
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.5s ease;
 }
 
 .img-load.loaded {
   opacity: 1;
 }
 
-/* Timeline Animation */
+/* Timeline item slide in */
 .timeline-item {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translateX(-16px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -194,120 +105,29 @@
   transform: translateX(0);
 }
 
-/* Skill Tag Animation */
-.skill-tag {
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.skill-tag:hover {
-  transform: translateY(-2px);
-}
-
-/* Accolade Card Animation */
+/* Accolade card hover */
 .accolade-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .accolade-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-/* Back to Top Animation */
+/* Back to top transition */
 .back-to-top {
   transition: opacity 0.3s ease, visibility 0.3s ease,
               background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Form Input Focus Animation */
-.form-group input,
-.form-group textarea {
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  box-shadow: 0 0 0 3px rgba(216, 152, 152, 0.2);
-}
-
-/* Footer Social Icons */
-.footer-social a {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.footer-social a:hover {
-  transform: translateY(-3px);
-}
-
-/* Page Transition */
+/* Page transition */
 .page-transition {
   opacity: 0;
-  animation: pageIn 0.6s ease forwards;
+  animation: pageIn 0.5s ease forwards;
 }
 
 @keyframes pageIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Loading Spinner */
-.loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--color-gray-light);
-  border-top-color: var(--color-accent);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Parallax Effect (subtle) */
-.parallax {
-  transition: transform 0.1s linear;
-}
-
-/* Pulse Animation */
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Shimmer Loading Effect */
-.shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--color-gray-light) 0%,
-    var(--color-white) 50%,
-    var(--color-gray-light) 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
