@@ -70,11 +70,23 @@
     --space-3xl: 4rem;
   }
 
+  /* Nav: compact on mobile */
+  .main-nav {
+    padding: 0 var(--space-sm);
+  }
+
+  .nav-brand {
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nav-links {
+    gap: var(--space-md);
+  }
+
   /* Hero */
-  .hero-box {
-    min-width: unset;
-    width: calc(100% - 2rem);
-    padding: 2.25rem 1.75rem;
+  .hero-inner {
+    padding: 0 var(--space-sm);
   }
 
   .hero-contacts {
@@ -89,14 +101,6 @@
 
   .hero-contact-link {
     font-size: 0.625rem;
-  }
-
-  /* Reduce silhouettes on mobile */
-  .silhouette.s3,
-  .silhouette.s6,
-  .silhouette.s8,
-  .silhouette.s11 {
-    display: none;
   }
 
   /* Projects: single column */
@@ -190,17 +194,12 @@
    Small Mobile (max 374px)
    ---------------------------------------- */
 @media (max-width: 374px) {
-  .hero-title {
-    font-size: 2rem;
-    letter-spacing: 0.06em;
+  .hero-line {
+    letter-spacing: 0.03em;
   }
 
-  .hero-label {
-    letter-spacing: 0.15em;
-  }
-
-  .hero-name {
-    letter-spacing: 0.2em;
+  .nav-brand {
+    font-size: 0.625rem;
   }
 }
 
