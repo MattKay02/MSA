@@ -78,7 +78,7 @@ A full-page `div.page-shapes` sits behind all content in `index.html`. Contains 
 | Card | Title | Desc | Image | Link |
 |------|-------|------|-------|------|
 | 1 | Void//ED | Academic / Competition | `images/Voided/main-1.jpg` | `projects/voided.html` |
-| 2 | OVA | Academic / Competition | `images/OVA/Main-1.jpg` | `projects/ova.html` |
+| 2 | OVA | Academic / Competition | `images/OVA/main-1.jpg` | `projects/ova.html` |
 | 3 | The Reform offices | Academic | `images/Reform/main-3-the-living-stich.png` | `projects/thereform.html` |
 
 ### About Section (`#about`, `.about-section`)
