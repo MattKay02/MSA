@@ -1,6 +1,6 @@
 # MSA — Matthew Simpson Architecture Portfolio
 
-Static multi-page portfolio for Matthew Simpson, an architecture student at UNLV. Presents three project case studies with imagery, narratives, and contact info.
+Static multi-page portfolio for Matthew Simpson, an architecture student at UNLV. Presents portfolio projects with imagery, narratives, and contact info.
 
 ## Stack
 
