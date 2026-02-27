@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLazyLoading();
   initNavActiveState();
   initParallaxShapes();
+  initBurgerMenu();
 });
 
 /* ========================================
@@ -200,6 +201,47 @@ function initParallaxShapes() {
   }
 
   requestAnimationFrame(tick);
+}
+
+/* ========================================
+   Burger Menu (mobile nav)
+   ======================================== */
+function initBurgerMenu() {
+  const nav = document.getElementById('main-nav');
+  const burger = nav?.querySelector('.nav-burger');
+  const mobileLinks = nav?.querySelectorAll('.nav-mobile-link');
+  if (!nav || !burger) return;
+
+  function openMenu() {
+    nav.classList.add('nav-open');
+    burger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    nav.classList.remove('nav-open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+
+  burger.addEventListener('click', () => {
+    nav.classList.contains('nav-open') ? closeMenu() : openMenu();
+  });
+
+  // Close when a mobile link is clicked
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close when clicking outside the nav
+  document.addEventListener('click', (e) => {
+    if (nav.classList.contains('nav-open') && !nav.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close if resized back to desktop
+  window.addEventListener('resize', throttle(() => {
+    if (window.innerWidth > 767) closeMenu();
+  }, 150));
 }
 
 /* ========================================

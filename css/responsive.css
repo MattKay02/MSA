@@ -70,9 +70,10 @@
     --space-3xl: 4rem;
   }
 
-  /* Nav: compact on mobile */
+  /* Nav: burger menu on mobile */
   .main-nav {
     padding: 0 var(--space-sm);
+    position: relative;
   }
 
   .nav-brand {
@@ -81,7 +82,11 @@
   }
 
   .nav-links {
-    gap: var(--space-md);
+    display: none;
+  }
+
+  .nav-burger {
+    display: flex;
   }
 
   /* Hero */
@@ -116,6 +121,11 @@
 
   .project-card {
     aspect-ratio: 4/5;
+  }
+
+  /* About: disable sticky image on mobile */
+  .about-left {
+    position: static;
   }
 
   /* About columns stack */
